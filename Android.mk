@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2008 The Android Open Source Project
+# Copyright (C) 2011 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,15 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-# This file is executed by build/envsetup.sh, and can use anything
-# defined in envsetup.sh.
-#
-# In particular, you can add lunch options with the add_lunch_combo
-# function: add_lunch_combo generic-eng
-
-
-# Note userdebug doesn't quite seem to work, yet.
-add_lunch_combo cm_MS690-eng
-add_lunch_combo cm_MS690-userdebug
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),thunderc)
+include $(call first-makefiles-under,$(call my-dir))
+endif
