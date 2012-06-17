@@ -1,5 +1,5 @@
 # Release name
-PRODUCT_RELEASE_NAME := OptimusV
+PRODUCT_RELEASE_NAME := OptimusM
 
 TARGET_BOOTANIMATION_NAME := vertical-320x480
 
@@ -12,19 +12,19 @@ $(call inherit-product, vendor/qcom/opensource/omx/mm-core/Android.mk)
 $(call inherit-product, vendor/qcom/opensource/omx/mm-video/Android.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/lge/VM670/VM670.mk)
+$(call inherit-product, device/lge/MS690/MS690.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := VM670
-PRODUCT_NAME := cm_VM670
-PRODUCT_BRAND := Virgin_Mobile
-PRODUCT_MODEL := LG-VM670
+PRODUCT_DEVICE := MS690
+PRODUCT_NAME := cm_MS690
+PRODUCT_BRAND := MetroPCS
+PRODUCT_MODEL := LG-MS690
 PROUDCT_MANUFACTURER := LGE
 PRODUCT_CHARACTERISTICS := phone
 
 RODUCT_BUILD_PROP_OVERRIDES += \
 	BUILD_ID=GWK74 \
-	PRODUCT_NAME=VM670 \
+	PRODUCT_NAME=MS690 \
 	BUILD_DISPLAY_ID="GWK74 $(shell date +%m%d%Y)" \
 	BUILD_FINGERPRINT="google/soju/crespo:4.0.3/GWK74/185293:user/release-keys" \
 	PRIVATE_BUILD_DESC="soju-user 4.0.3 GWK74 185293 release-keys" \
