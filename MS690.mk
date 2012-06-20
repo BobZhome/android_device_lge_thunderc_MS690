@@ -1,9 +1,9 @@
 SUB_MODEL := MS690
 
-PRODUCT_AAPT_CONFIG := normal mdpi
-PRODUCT_AAPT_PREF_CONFIG := mdpi
+PRODUCT_AAPT_CONFIG := normal mdpi 
+PRODUCT_AAPT_PREF_CONFIG := mdpi 
 
-PRODUCT_COPY_FILES += vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/etc/media_profiles.xml:system/etc/media_profiles.xml
+PRODUCT_COPY_FILES += vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/etc/media_profiles.xml:system/etc/media_profiles.xml 
 
 $(call inherit-product-if-exists, vendor/lge/thunderc/thunderc-vendor.mk)
 $(call inherit-product, device/lge/common/device.mk)
@@ -16,13 +16,13 @@ DEVICE_PACKAGE_OVERLAYS += device/lge/MS690/overlay
 # XXX: this is non-standard
 LOCAL_KERNEL_DIR := device/lge/MS690/kernels/BobZ
 LOCAL_KERNEL_MODULES := librasdioif.ko tun.ko wireless.ko cifs.ko
-
+	
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL_DIR)/zImage:kernel
 
 PRODUCT_COPY_FILES += \
     $(foreach f,$(LOCAL_KERNEL_MODULES),$(LOCAL_KERNEL_DIR)/$(f):system/lib/modules/$(f)) \
-
+    
 # Board-specific init
 PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/init.qcom.sh:root/init.qcom.sh \
@@ -42,8 +42,8 @@ PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/usr/keychars/thunderc_keypad.kcm.bin:system/usr/keychars/thunderc_keypad.kcm.bin
 
 # configs
-PRODUCT_COPY_FILES += vendor/lge/thunderc/proprietary/$(SUB_MODEL)/default.prop:root/default.prop
-PRODUCT_COPY_FILES += vendor/lge/thunderc/proprietary/$(SUB_MODEL)/adreno_config.txt:system/etc/adreno_config.txt
+PRODUCT_COPY_FILES += vendor/lge/thunderc/proprietary/$(SUB_MODEL)/default.prop:root/default.prop 
+PRODUCT_COPY_FILES += vendor/lge/thunderc/proprietary/$(SUB_MODEL)/adreno_config.txt:system/etc/adreno_config.txt 	
 
 PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/etc/init.d/05mountext:system/etc/init.d/05mountext \
@@ -59,7 +59,7 @@ PRODUCT_COPY_FILES += \
 #WIFI
 PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/bin/dhcpcd:system/bin/dhcpcd
-
+    
 # OFFLINE CHARGING
 PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/bootimages/mpcs_power_on_00.rle:root/bootimages/mpcs_power_on_00.rle \
@@ -106,7 +106,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/bin/ami304d:system/bin/ami304d \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/lib/hw/sensors.thunderc.so:system/lib/hw/sensors.thunderc.so
-
+    
 # 3D
 PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/lib/egl/egl.cfg:system/lib/egl/egl.cfg \
@@ -132,7 +132,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/lib/libmmjpeg.so:obj/lib/libmmjpeg.so \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/lib/liboemcamera.so:system/lib/liboemcamera.so \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/lib/liboemcamera.so:obj/lib/liboemcamera.so
-
+    
 # Wifi
 PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/bin/wl:system/bin/wl \
@@ -152,10 +152,9 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/etc/AudioFilter.csv:system/etc/AudioFilter.csv \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/lib/libaudioeq.so:system/lib/libaudioeq.so
-
+	
 # Device permissions
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -242,7 +241,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/etc/firmware/BCM4325D1_004.002.004.0285.0288.hcd:system/etc/firmware/BCM4325D1_004.002.004.0285.0288.hcd
-
+    
 # IDC file
 PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/$(SUB_MODEL)/system/usr/idc/touch_mcs6000.idc:system/usr/idc/touch_mcs6000.idc\
